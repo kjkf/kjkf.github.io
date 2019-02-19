@@ -5,9 +5,15 @@
 	display: none;
 	align-items: center;
 	margin-left: rem(30px);
+	border: none;
+    background: transparent;
 	
 	@include tablets() {
 		display: flex;
+	}
+
+	&:hover {
+		cursor: pointer;
 	}
 
 }
@@ -33,8 +39,9 @@
 	&:after {
 		top: rem(17px);
 	} 
-
 }
+
+
 
  .hamburger__menu-wrap {
 	position: fixed;
@@ -93,6 +100,10 @@
 .hamburger__menu-closeBtn {
 	background: transparent;
 	border-style: none;
+
+	&:hover {
+		cursor: pointer;
+	} 
 }
 
 

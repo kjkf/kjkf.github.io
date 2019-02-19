@@ -5,6 +5,15 @@
 	transform:rotate(45deg);
 	-ms-transform:rotate(45deg); /* IE 9 */
 	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+
+	border-style: none;
+	background: transparent;
+
+	&:hover {
+		cursor: pointer;
+		outline: none;
+	}
+
 /*background: #ccc; /**/
 
 }
@@ -14,10 +23,13 @@
 	position: absolute;
 	z-index: 100;
 	background: #c1c2c2;
+
+
 }
 
 .cross:before {
 	left: 50%;
+	top: 0;
 	width: 3px;
 	margin-left: -5%;
 	height: 100%;
@@ -26,6 +38,7 @@
 
 .cross:after {
 	top: 50%;
+	left: 0;
 	height: 3px;
 	margin-top: -5%;
 	width: 100%;
