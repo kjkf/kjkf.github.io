@@ -183,7 +183,7 @@ function createModal(content) {
 
 	const closeBtn = container.querySelector(".closeBtn");
 	closeBtn.addEventListener('click', e => {
-		event.preventDefault();
+		e.preventDefault();
 		document.body.removeChild(container);
 	});
 
@@ -320,6 +320,7 @@ function validateField(field) {
 }
 
 document.addEventListener('click', () => {
+	//console.log("555555555555");
 	if (isError) {
 		let errorFlds = document.querySelectorAll(".has-error");
 				

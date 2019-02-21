@@ -35,6 +35,12 @@ body {
 	overflow: hidden;
 }
 
+.maincontent {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
 .container {
 	max-width: rem(940px);
 	width: 95%;

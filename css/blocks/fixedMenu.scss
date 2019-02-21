@@ -18,6 +18,10 @@
     margin-bottom: rem(7px);
     position: relative;
 
+    &.active {
+		border-color: #fff;
+	}
+
 	&:hover {
 		border-color: #fff;
 		cursor: pointer;

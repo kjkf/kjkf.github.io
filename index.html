@@ -8,9 +8,10 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
 	<div class="wrapper">
 		<div class="maincontent">
-			<section class="section hero" id="hero">
+			<section class="section hero active" title="О нас" id="hero">
 				<div class="container hero__container">
 					<header class="header hero__header">
 						<div class="logo">
@@ -19,34 +20,34 @@
 						<div class="header__buttons">
 							<div class="header__menu">
 								<nav class="menu">
-									<ul class="menu__list">
+									<ul class="menu__list" idx="0">
 										<li class="menu__item">
-											<a href="#hero" class="menu__link">О нас</a>
+											<a href="#"  class="menu__link">О нас</a>
 										</li>
-										<li class="menu__item">
-											<a href="#burgers" class="menu__link">Бургеры</a>
+										<li class="menu__item" idx="2">
+											<a href="#" class="menu__link">Бургеры</a>
 										</li>
-										<li class="menu__item">
-											<a href="#team" class="menu__link">Команда</a>
+										<li class="menu__item" idx="3">
+											<a href="#" class="menu__link">Команда</a>
 										</li>
-										<li class="menu__item">
-											<a href="#menus" class="menu__link">Меню</a>
+										<li class="menu__item" idx="4">
+											<a href="#" class="menu__link">Меню</a>
 										</li>
-										<li class="menu__item">
-											<a href="#reviews" class="menu__link">Отзывы</a>
+										<li class="menu__item" idx="5">
+											<a href="#" class="menu__link">Отзывы</a>
 										</li>
-										<li class="menu__item">
+										<li class="menu__item" idx="1">
 											<a href="#" class="menu__link">Как мы работаем</a>
 										</li>
-										<li class="menu__item">
-											<a href="#contact" class="menu__link">Контакты</a>
+										<li class="menu__item" idx="7">
+											<a href="#" class="menu__link">Контакты</a>
 										</li>
 									</ul>
 								</nav>
 							</div>
 							
 							<div class="header__links">
-								<a href="#order" class="btn hero__order-btn">Заказать</a>
+								<a href="#" class="btn hero__order-btn">Заказать</a>
 								<button class="hamburger__menu-link">
 									<span class="hamburger__menu-link__bars"></span>
 								</button>
@@ -66,7 +67,7 @@
 					<a href="#" class="arrow arrow-down hero__arrow-down"></a>
 				</div>
 			</section>
-			<section class="section section_centered best" id="best">
+			<section class="section section_centered best" title="Как мы работаем" id="best">
 				<div class="container">
 					<h2 class="title title_color-black best__title">Мы лучшие</h2>
 					<ul class="best__list">
@@ -106,7 +107,7 @@
 					</ul>
 				</div>
 			</section>
-			<section class="section section_centered burgers" id="burgers">
+			<section class="section section_centered burgers" title="Бургеры" id="burgers">
 				<div class="container burgers__container">
 					<div class="burgers__slide">
 						<ul class="burgers__slider__list">
@@ -184,7 +185,7 @@
 										</div>
 										<div class="burger__order">
 											<span class="burger__price"><span class="burger__price-num">500</span>рублей</span>
-											<a href="#order" class="btn burger__btn">Заказать</a>
+											<a href="#" class="btn burger__btn">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -512,7 +513,7 @@
 					<button type="button" id="right" class="arrow burger__arrow-right arrow-right"></button>			
 				</div>
 			</section>
-			<section class="section team" id="team">
+			<section class="section team" title="Команда" id="team">
 				<div class="team__container">
 					<h2 class="title">команда</h2>
 					<div class="team__accordeon accordeon">
@@ -579,7 +580,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section menus" id="menus">
+			<section class="section menus" title="Меню" id="menus">
 				<div class="container">
 					<h2 class="title title_color-white menus-title">Меню</h2>
 					<div class="menus__accordeon-wrap">
@@ -621,7 +622,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section reviews" id="reviews">
+			<section class="section reviews" title="Отзывы" id="reviews">
 				<ul class="reviews__list">
 					<li class="reviews__item">
 						<div class="review">
@@ -772,7 +773,7 @@
 				</ul>
 			</section>
 
-			<section class="section section_centered order" id="order"> 
+			<section class="section section_centered order" title="Заказать" id="order"> 
 				<div class="container">
 					<h2 class="title">Закажите доставку</h2>
 					<form action="" class="form" id="orderForm">
@@ -854,7 +855,7 @@
 					</form>
 				</div>				
 			</section>
-			<section class="section contact" id="contact">
+			<section class="section contact" title="Контакты" id="contact">
 				<div class=" contact__container">
 					<img class="map" src="./img/map.jpg" alt="Карта">
 
@@ -939,13 +940,13 @@
 		</div>
 		<nav class="fixed-menu">
 			<ul class="fixed-menu__list">
-				<li class="fixed-menu__item"><a href="#hero" class="menu__link"></a></li>
+				<!-- <li class="fixed-menu__item"><a href="#hero" class="menu__link"></a></li>
 				<li class="fixed-menu__item"><a href="#best" class="menu__link"></a></li>
 				<li class="fixed-menu__item"><a href="#burgers" class="menu__link"></a></li>
 				<li class="fixed-menu__item"><a href="#team" class="menu__link"></a></li>
 				<li class="fixed-menu__item"><a href="#menus" class="menu__link"></a></li>
 				<li class="fixed-menu__item"><a href="#reviews" class="menu__link"></a></li>
-				<li class="fixed-menu__item"><a href="#contact" class="menu__link"></a></li>
+				<li class="fixed-menu__item"><a href="#contact" class="menu__link"></a></li> -->
 			</ul>
 		</nav>
 
@@ -974,7 +975,8 @@
 		</script>
 		
 	</div>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script/pageScroll.js"></script>
 	<script src="script/main.js"></script>
 </body>
 </html>
