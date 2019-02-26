@@ -26,6 +26,12 @@ task( 'clean', () => {
     .pipe( rm() )
 });
 
+task( 'copy:ico', () => {
+  return src( `${SRC_PATH}/*.ico`)
+  	.pipe( dest(DIST_PATH))
+  	.pipe( reload ({stream : true})) 
+});
+
 task( 'copy:html', () => {
   return src( `${SRC_PATH}/*.html`)
   	.pipe( dest(DIST_PATH))
@@ -53,7 +59,7 @@ task('styles', () => {
   	.pipe(concat('main.min.scss'))
   	.pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(px2rem())
+    //.pipe(px2rem())
     .pipe(gulpif(env === "dev",
     	autoprefixer({
 	            browsers: ['last 2 versions'],
@@ -120,6 +126,7 @@ task("watch", () => {
 	watch(`${SRC_PATH}/css/**/*.scss`, series("styles"));
 	watch(`${SRC_PATH}/script/*.js`, series("scripts"));
 	watch(`${SRC_PATH}/*.html`, series("copy:html"));
+	watch(`${SRC_PATH}/*.ico`, series("copy:ico"));
 	watch(`${SRC_PATH}/img/**/*.*`, series("copy:img"));
 	watch(`${SRC_PATH}/fonts/**/*.*`, series("copy:fonts"));
 });
@@ -128,7 +135,7 @@ task(
 	"default", 
 	series(
 		"clean", 
-		parallel("copy:html", "copy:fonts", "copy:img", "styles", "scripts"),
+		parallel("copy:html", "copy:ico", "copy:fonts", "copy:img", "styles", "scripts"),
 		parallel("watch", "server")
 		
 		)
@@ -138,6 +145,6 @@ task(
 	"build", 
 	series(
 		"clean", 
-		parallel("copy:html", "copy:fonts", "copy:img", "styles", "scripts")		
+		parallel("copy:html", "copy:ico", "copy:fonts", "copy:img", "styles", "scripts")		
 	)
 );
