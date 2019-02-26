@@ -1,0 +1,32 @@
+.map__hint {
+	padding: 25px 30px;
+	border-radius: 5px;
+	color: #3c2b79;
+	font-style: italic;
+}
+
+.map__balloon {
+	display: flex;
+	padding: 5px 10px;
+	color: #3c2b79;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.map__burger-img-wrapper {
+	width: rem(75px);
+	padding-right: 25px;
+
+}
+
+.map__burger-img {	
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* .ymaps-2-1-72-balloon__close+.ymaps-2-1-72-balloon__content {
+    margin-right: 0px !important;
+    padding-right: 25px !important;
+} */

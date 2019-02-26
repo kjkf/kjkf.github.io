@@ -1,5 +1,6 @@
-
-var generateDots = function() {
+/*;(function () {
+	// S C R O L L    P A G E 
+	var generateDots = function() {
 	$(".section").each(function() {
 		var dot = $('<li>', {
 			attr : {
@@ -46,7 +47,7 @@ var moveSlide = function(container, slideNum) {
 }
 
 $(".wrapper").on("wheel", function(e) {
-	console.log(e.originalEvent.deltaY);
+	//console.log(e.originalEvent.deltaY);
 	e.preventDefault();
 	var $this = $(this),
 		container = $this.closest('.wrapper'),
@@ -74,7 +75,6 @@ $('body').on('click', '.fixed-menu__item', function() {
 });
 
 $('body').on('click', '.menu__item', function() {
-	console.log("123");
 	var $this = $(this),
 		//parent = $this.closest();
 		index = $this.attr("idx"),
@@ -87,8 +87,8 @@ $('body').on('click', '.menu__item', function() {
 
 var goToOrder = function($this) {
 	var container = $this.closest('.wrapper');
-	moveSlide(container, 6);
-	setActiveDot(6);
+	moveSlide(container, 7);
+	setActiveDot(7);
 };
 
 $(".hero__order-btn").on("click", function() {
@@ -99,4 +99,6 @@ $(".hero__order-btn").on("click", function() {
 $(".burger__btn").on("click", function() {
 	var $this = $(this);
 	goToOrder($this);
-});
+});	
+})();
+*/

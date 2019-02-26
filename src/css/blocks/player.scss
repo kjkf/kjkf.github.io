@@ -1,0 +1,163 @@
+.player {
+  position: relative;
+  display: inline-block;
+
+  &.hidden {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+}
+
+.player__splash {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/player-splash.jpg') center center / cover no-repeat;
+  cursor: pointer;
+}
+
+.player__wrapper {
+  &.active .player__splash {
+    display: none;
+  }
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(35px);
+  background: #3e3e3e;
+}
+
+.player__start {
+  width: 0;
+  height: 0;
+  border: rem(12px) solid transparent;
+  border-left-color: #626262;
+  padding: 0;
+  border-right-width: 0;
+  background: transparent;
+  position: absolute;
+  top: rem(5px);
+  left: rem(20px);
+  outline: none;
+  &.paused {
+    width: rem(14px);
+    height: rem(22px);
+    border: none;
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: rem(5px);
+      top: 0;
+      bottom: 0;
+      background: #626262;
+    }
+    &:after {
+      right: 0;
+    }
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+.player__playback {
+  position: absolute;
+  height: rem(4px);
+  width: rem(390px);
+  background: #626262;
+  top: rem(15px);
+  left: rem(50px);
+  cursor: pointer;
+}
+
+.player__playback-button {
+  background: #626262;
+  border-radius: rem(50px);
+  border: none;
+  width: rem(12px);
+  height: rem(12px); 
+
+  padding: 0;
+  position: absolute;
+  top: rem(-4px);
+  transform: translateX(-50%);
+  left: 0;
+}
+
+.player__duration {
+  position: absolute;
+  top: rem(7px);
+  right: rem(20px);
+  color: #626262;
+  font-weight: bold;
+}
+
+.player__volume {
+  position: absolute;
+
+  top: 0;
+  right: rem(220px);
+  &:hover {
+    cursor: pointer;
+  }
+
+
+}
+
+.player__volume-icon {
+    position: absolute;
+    background: url(../img/icons/volume.svg) center center no-repeat;
+    width: rem(35px);
+    height: rem(30px);
+    top: 2px;
+    left: 0;
+    border: none;
+    outline: none;
+    &.mute {
+      &:before {
+        content: "";
+        display: block;
+        background: #626262;
+        width: 4px;
+        height: rem(25px);
+        transform: rotate(-45deg);
+        position: absolute;
+        left: rem(18px);
+        top: rem(2px);
+      }
+    }   
+}
+
+.player__volume-control {
+  position: absolute;
+  height: rem(4px);
+  width: rem(90px);
+  background: #626262;
+  top: rem(14px);
+  right: rem(-125px);
+  cursor: pointer;
+
+}
+
+.player__volume-control-button {
+  background: #626262;
+  border-radius: rem(50px);
+  border: none;
+  width: rem(12px);
+  height: rem(12px); 
+
+  padding: 0;
+  position: absolute;
+  top: rem(-4px);
+  transform: translateX(-50%);
+  left: 0;
+}

@@ -140,12 +140,12 @@
 }
 .burgers__kkal {
 	position: absolute;	
-	width: 70px;
-	height: 80px;
-	left: rem(-4px);
-    bottom: rem(-50px);
+	width: rem(70px);
+	height: rem(80px);
+	//left: rem(-4px);
+    bottom: rem(0px);
 	background: url('../img/icons/kkal.svg') center center no-repeat;
-	line-height: rem(24px);
+	//line-height: rem(24px);
 	padding-top: rem(34px);
     padding-left: rem(5px);
 

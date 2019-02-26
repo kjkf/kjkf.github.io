@@ -8,7 +8,7 @@ $tablets: 768px;
 $phones: 480px;
 $anotherBreakpoint: 1000px;
 
-@import "_misc/media.scss";
+/* @import "_misc/media.scss";
 @import "_misc/fonts.scss";
 @import "_misc/layout.scss";
 
@@ -26,10 +26,15 @@ $anotherBreakpoint: 1000px;
 @import "./blocks/menusAccordeon.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/contact.scss";
+@import "./blocks/work.scss";
 @import "./blocks/order.scss";
+@import "./blocks/map.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/fixedMenu.scss";
 @import "./blocks/cross.scss";
 @import "./blocks/modals.scss";
 @import "./blocks/errors.scss";
-@import "./blocks/tabs.scss";
+@import "./blocks/tabs.scss"; */
+
+@import './_misc/*.scss';
+@import './blocks/*.scss';

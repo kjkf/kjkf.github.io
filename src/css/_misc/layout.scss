@@ -31,14 +31,18 @@ body {
 	position: relative;
 	width: 100%;
 	//max-width: rem(940px);
-	min-height: 100%;
+	height: 100%;
 	overflow: hidden;
 }
 
 .maincontent {
-	position: absolute;
+	/* position: absolute;
 	left: 0;
 	top: 0;
+	width: 100%; */
+	height: 100%;
+	transition: transform 1s;
+	will-change: transform;
 }
 
 .container {
@@ -46,7 +50,7 @@ body {
 	width: 95%;
 	height: 100%;
 	margin: 0 auto;
-	//position: relative;
+	//position: relative; 
 	display: flex;
 	flex-direction: column;
 }
