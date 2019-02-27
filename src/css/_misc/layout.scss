@@ -47,6 +47,7 @@ body {
 
 .container {
 	max-width: rem(940px);
+	min-width: rem(320px);
 	width: 95%;
 	height: 100%;
 	margin: 0 auto;
