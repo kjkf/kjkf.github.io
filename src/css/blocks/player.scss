@@ -1,6 +1,8 @@
 .player {
   position: relative;
   display: inline-block;
+  width: 96%;
+  min-height: rem(405px);
 
   &.hidden {
     opacity: 0;
@@ -72,11 +74,19 @@
 .player__playback {
   position: absolute;
   height: rem(4px);
-  width: rem(390px);
+  width: 65%;//rem(390px);
   background: #626262;
   top: rem(15px);
   left: rem(50px);
   cursor: pointer;
+
+ @include tablets() {
+   width: 50%;
+ }
+ @include phones() {
+    width: 40%;
+  } 
+
 }
 
 .player__playback-button {
@@ -104,8 +114,9 @@
 .player__volume {
   position: absolute;
 
-  top: 0;
+  top: 1px;
   right: rem(220px);
+
   &:hover {
     cursor: pointer;
   }
@@ -134,7 +145,15 @@
         left: rem(18px);
         top: rem(2px);
       }
-    }   
+    }  
+
+      @include tablets() {
+        left: rem(15px);
+      } 
+
+      @include phones() {
+        left: rem(30px);
+      } 
 }
 
 .player__volume-control {
@@ -145,6 +164,13 @@
   top: rem(14px);
   right: rem(-125px);
   cursor: pointer;
+
+  @include tablets() {
+    width: rem(70px);
+  }
+  @include phones() {
+    width: rem(50px);
+  }
 
 }
 

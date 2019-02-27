@@ -5,7 +5,7 @@
 
   function onYouTubeIframeAPIReady() {
     player = new YT.Player("yt-player", {
-      width: "660",
+      width: "100%",
       height: "405",
       videoId: "zmg_jOwa9Fc",
       playerVars: {
